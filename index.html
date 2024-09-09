@@ -114,7 +114,13 @@
             countdown--;
             countdownElement.textContent = countdown;
         } else {
-            window.location.href = 'https://heliohealth.ultipro.com/';
+            if(countdown == 0){
+                window.location.href = 'https://heliohealth.ultipro.com/';    
+                countdown--;
+            } else {
+                countdown = "Please wait while you are redirected...";
+                countdownElement.textContent = countdown;
+            }
         }
     }
 
